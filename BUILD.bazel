@@ -173,6 +173,7 @@ cc_library(
     srcs = [prefix_dir + "lib/symbol-table.cc"],
     hdrs = [
         prefix_dir + "include/fst/symbol-table.h",
+        prefix_dir + "include/fst/windows_defs.inc",
     ],
     copts = ["-Wno-sign-compare"],
     includes = [prefix_dir + "include"],
