@@ -28,8 +28,8 @@
 #include <fst/script/arg-packs.h>
 #include <fst/script/fst-class.h>
 
-DECLARE_string(arc_type);
-DECLARE_bool(decode);
+DECLARE_FST_string(arc_type);
+DECLARE_FST_bool(decode);
 
 int fstcompress_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -41,7 +41,7 @@ int fstcompress_main(int argc, char **argv) {
   usage += " [in.fst [out.fstz]]\n";
   usage += " --decode [in.fstz [out.fst]]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc > 3) {
     ShowUsage();
     return 1;

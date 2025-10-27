@@ -19,13 +19,13 @@
 #include <fst/fst.h>
 #include <fst/shortest-distance.h>
 
-DEFINE_bool(connect, true, "Trim output");
-DEFINE_double(delta, fst::kShortestDelta, "Comparison/quantization delta");
-DEFINE_int64(nstate, fst::kNoStateId, "State number threshold");
-DEFINE_string(queue_type, "auto",
+DEFINE_FST_bool(connect, true, "Trim output");
+DEFINE_FST_double(delta, fst::kShortestDelta, "Comparison/quantization delta");
+DEFINE_FST_int64(nstate, fst::kNoStateId, "State number threshold");
+DEFINE_FST_string(queue_type, "auto",
               "Queue type: one of \"auto\", "
               "\"fifo\", \"lifo\", \"shortest\", \"state\", \"top\"");
-DEFINE_string(weight, "", "Weight threshold");
+DEFINE_FST_string(weight, "", "Weight threshold");
 
 int fstrmepsilon_main(int argc, char **argv);
 

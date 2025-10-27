@@ -30,14 +30,14 @@
 #include <fst/script/fst-class.h>
 #include <fst/script/relabel.h>
 
-DECLARE_string(isymbols);
-DECLARE_string(osymbols);
-DECLARE_string(relabel_isymbols);
-DECLARE_string(relabel_osymbols);
-DECLARE_string(relabel_ipairs);
-DECLARE_string(relabel_opairs);
-DECLARE_string(unknown_isymbol);
-DECLARE_string(unknown_osymbol);
+DECLARE_FST_string(isymbols);
+DECLARE_FST_string(osymbols);
+DECLARE_FST_string(relabel_isymbols);
+DECLARE_FST_string(relabel_osymbols);
+DECLARE_FST_string(relabel_ipairs);
+DECLARE_FST_string(relabel_opairs);
+DECLARE_FST_string(unknown_isymbol);
+DECLARE_FST_string(unknown_osymbol);
 
 int fstrelabel_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -57,7 +57,7 @@ int fstrelabel_main(int argc, char **argv) {
   usage += "  --relabel_ipairs ipairs.txt\n";
   usage += "  --relabel_opairs opairs.txt\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc > 3) {
     ShowUsage();
     return 1;

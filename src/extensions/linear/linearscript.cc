@@ -36,16 +36,16 @@
 #include <fst/script/script-impl.h>
 #include <unordered_map>
 
-DEFINE_string(delimiter, "|",
+DEFINE_FST_string(delimiter, "|",
               "Single non-white-space character delimiter inside sequences of "
               "feature symbols and output symbols");
-DEFINE_string(empty_symbol, "<empty>",
+DEFINE_FST_string(empty_symbol, "<empty>",
               "Special symbol that designates an empty sequence");
 
-DEFINE_string(start_symbol, "<s>", "Start of sentence symbol");
-DEFINE_string(end_symbol, "</s>", "End of sentence symbol");
+DEFINE_FST_string(start_symbol, "<s>", "Start of sentence symbol");
+DEFINE_FST_string(end_symbol, "</s>", "End of sentence symbol");
 
-DEFINE_bool(classifier, false,
+DEFINE_FST_bool(classifier, false,
             "Treat input model as a classifier instead of a tagger");
 
 namespace fst {

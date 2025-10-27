@@ -30,10 +30,10 @@
 
 static const char *private_tmpdir = getenv("TMPDIR");
 
-DEFINE_int32(v, 0, "verbosity level");
-DEFINE_bool(help, false, "show usage information");
-DEFINE_bool(helpshort, false, "show brief usage information");
-DEFINE_string(tmpdir, private_tmpdir ? private_tmpdir : "/tmp",
+DEFINE_FST_int32(v, 0, "verbosity level");
+DEFINE_FST_bool(help, false, "show usage information");
+DEFINE_FST_bool(helpshort, false, "show brief usage information");
+DEFINE_FST_string(tmpdir, private_tmpdir ? private_tmpdir : "/tmp",
               "temporary directory");
 
 static std::string flag_usage;

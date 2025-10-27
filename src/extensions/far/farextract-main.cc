@@ -28,12 +28,12 @@
 #include <fst/util.h>
 #include <fst/script/arg-packs.h>
 
-DECLARE_string(filename_prefix);
-DECLARE_string(filename_suffix);
-DECLARE_int32(generate_filenames);
-DECLARE_string(keys);
-DECLARE_string(key_separator);
-DECLARE_string(range_delimiter);
+DECLARE_FST_string(filename_prefix);
+DECLARE_FST_string(filename_suffix);
+DECLARE_FST_int32(generate_filenames);
+DECLARE_FST_string(keys);
+DECLARE_FST_string(key_separator);
+DECLARE_FST_string(range_delimiter);
 
 int farextract_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -43,7 +43,7 @@ int farextract_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [in1.far in2.far...]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   s::ExpandArgs(argc, argv, &argc, &argv);
 
   std::vector<std::string> sources;

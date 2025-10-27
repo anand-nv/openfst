@@ -19,9 +19,9 @@
 #include <fst/fst.h>
 #include <fst/weight.h>
 
-DEFINE_double(delta, fst::kDelta, "Comparison/quantization delta");
-DEFINE_int64(nstate, fst::kNoStateId, "State number threshold");
-DEFINE_string(weight, "", "Weight threshold");
+DEFINE_FST_double(delta, fst::kDelta, "Comparison/quantization delta");
+DEFINE_FST_int64(nstate, fst::kNoStateId, "State number threshold");
+DEFINE_FST_string(weight, "", "Weight threshold");
 
 int fstprune_main(int argc, char **argv);
 

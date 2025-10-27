@@ -29,12 +29,12 @@
 #include <fst/script/randgen.h>
 #include <fst/script/script-impl.h>
 
-DECLARE_int32(max_length);
-DECLARE_int32(npath);
-DECLARE_uint64(seed);
-DECLARE_string(select);
-DECLARE_bool(weighted);
-DECLARE_bool(remove_total_weight);
+DECLARE_FST_int32(max_length);
+DECLARE_FST_int32(npath);
+DECLARE_FST_uint64(seed);
+DECLARE_FST_string(select);
+DECLARE_FST_bool(weighted);
+DECLARE_FST_bool(remove_total_weight);
 
 int fstrandgen_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -46,7 +46,7 @@ int fstrandgen_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [in.fst [out.fst]]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc > 3) {
     ShowUsage();
     return 1;

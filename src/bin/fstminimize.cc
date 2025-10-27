@@ -18,8 +18,8 @@
 #include <fst/flags.h>
 #include <fst/shortest-distance.h>
 
-DEFINE_double(delta, fst::kShortestDelta, "Comparison/quantization delta");
-DEFINE_bool(allow_nondet, false, "Minimize non-deterministic FSTs");
+DEFINE_FST_double(delta, fst::kShortestDelta, "Comparison/quantization delta");
+DEFINE_FST_bool(allow_nondet, false, "Minimize non-deterministic FSTs");
 
 int fstminimize_main(int argc, char **argv);
 

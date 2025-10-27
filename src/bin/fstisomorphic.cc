@@ -18,7 +18,7 @@
 #include <fst/flags.h>
 #include <fst/weight.h>
 
-DEFINE_double(delta, fst::kDelta, "Comparison/quantization delta");
+DEFINE_FST_double(delta, fst::kDelta, "Comparison/quantization delta");
 
 int fstisomorphic_main(int argc, char **argv);
 

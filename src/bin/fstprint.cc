@@ -17,16 +17,16 @@
 
 #include <fst/flags.h>
 
-DEFINE_bool(acceptor, false, "Input in acceptor format?");
-DEFINE_string(isymbols, "", "Input label symbol table");
-DEFINE_string(osymbols, "", "Output label symbol table");
-DEFINE_string(ssymbols, "", "State label symbol table");
-DEFINE_bool(numeric, false, "Print numeric labels?");
-DEFINE_string(save_isymbols, "", "Save input symbol table to file");
-DEFINE_string(save_osymbols, "", "Save output symbol table to file");
-DEFINE_bool(show_weight_one, false,
+DEFINE_FST_bool(acceptor, false, "Input in acceptor format?");
+DEFINE_FST_string(isymbols, "", "Input label symbol table");
+DEFINE_FST_string(osymbols, "", "Output label symbol table");
+DEFINE_FST_string(ssymbols, "", "State label symbol table");
+DEFINE_FST_bool(numeric, false, "Print numeric labels?");
+DEFINE_FST_string(save_isymbols, "", "Save input symbol table to file");
+DEFINE_FST_string(save_osymbols, "", "Save output symbol table to file");
+DEFINE_FST_bool(show_weight_one, false,
             "Print/draw arc weights and final weights equal to semiring One?");
-DEFINE_string(missing_symbol, "",
+DEFINE_FST_string(missing_symbol, "",
               "Symbol to print when lookup fails (default raises error)");
 
 int fstprint_main(int argc, char **argv);

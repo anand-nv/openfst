@@ -36,25 +36,25 @@
 //
 // Definition example:
 //
-//    DEFINE_int32(length, 0, "length");
+//    DEFINE_FST_int32(length, 0, "length");
 //
 // This defines variable FST_FLAGS_length, initialized to 0.
 //
 // Declaration example:
 //
-//    DECLARE_int32(length);
+//    DECLARE_FST_int32(length);
 //
-// SET_FLAGS() can be used to set flags from the command line
+// SET_FST_FLAGS() can be used to set flags from the command line
 // using, for example, '--length=2'.
 //
 // ShowUsage() can be used to print out command and flag usage.
 
-#define DECLARE_bool(name) extern bool FST_FLAGS_ ## name
-#define DECLARE_string(name) extern std::string FST_FLAGS_##name
-#define DECLARE_int32(name) extern int32_t FST_FLAGS_##name
-#define DECLARE_int64(name) extern int64_t FST_FLAGS_##name
-#define DECLARE_uint64(name) extern uint64_t FST_FLAGS_##name
-#define DECLARE_double(name) extern double FST_FLAGS_ ## name
+#define DECLARE_FST_bool(name) extern bool FST_FLAGS_ ## name
+#define DECLARE_FST_string(name) extern std::string FST_FLAGS_##name
+#define DECLARE_FST_int32(name) extern int32_t FST_FLAGS_##name
+#define DECLARE_FST_int64(name) extern int64_t FST_FLAGS_##name
+#define DECLARE_FST_uint64(name) extern uint64_t FST_FLAGS_##name
+#define DECLARE_FST_double(name) extern double FST_FLAGS_ ## name
 
 template <typename T>
 struct FlagDescription {
@@ -191,7 +191,7 @@ class FlagRegisterer {
 };
 
 
-#define DEFINE_VAR(type, name, value, doc)                                    \
+#define DEFINE_FST_VAR(type, name, value, doc)                                    \
   type FST_FLAGS_ ## name = value;                                            \
   static FlagRegisterer<type>                                                 \
   name ## _flags_registerer(#name, FlagDescription<type>(&FST_FLAGS_ ## name, \
@@ -200,17 +200,17 @@ class FlagRegisterer {
                                                          __FILE__,            \
                                                          value))
 
-#define DEFINE_bool(name, value, doc) DEFINE_VAR(bool, name, value, doc)
-#define DEFINE_string(name, value, doc) \
-  DEFINE_VAR(std::string, name, value, doc)
-#define DEFINE_int32(name, value, doc) DEFINE_VAR(int32_t, name, value, doc)
-#define DEFINE_int64(name, value, doc) DEFINE_VAR(int64_t, name, value, doc)
-#define DEFINE_uint64(name, value, doc) DEFINE_VAR(uint64_t, name, value, doc)
-#define DEFINE_double(name, value, doc) DEFINE_VAR(double, name, value, doc)
+#define DEFINE_FST_bool(name, value, doc) DEFINE_FST_VAR(bool, name, value, doc)
+#define DEFINE_FST_string(name, value, doc) \
+  DEFINE_FST_VAR(std::string, name, value, doc)
+#define DEFINE_FST_int32(name, value, doc) DEFINE_FST_VAR(int32_t, name, value, doc)
+#define DEFINE_FST_int64(name, value, doc) DEFINE_FST_VAR(int64_t, name, value, doc)
+#define DEFINE_FST_uint64(name, value, doc) DEFINE_FST_VAR(uint64_t, name, value, doc)
+#define DEFINE_FST_double(name, value, doc) DEFINE_FST_VAR(double, name, value, doc)
 
 
 // Temporary directory.
-DECLARE_string(tmpdir);
+DECLARE_FST_string(tmpdir);
 
 void SetFlags(const char *usage, int *argc, char ***argv, bool remove_flags,
               const char *src = "");
@@ -223,7 +223,7 @@ void SetFlag(Type *flag, Value value) {
 
 void FailedNewHandler();
 
-#define SET_FLAGS(usage, argc, argv, rmflags) \
+#define SET_FST_FLAGS(usage, argc, argv, rmflags) \
 std::set_new_handler(FailedNewHandler); \
 SetFlags(usage, argc, argv, rmflags, __FILE__)
 

@@ -19,12 +19,12 @@
 
 #include <fst/flags.h>
 
-DEFINE_bool(keep_parentheses, false, "Keep PDT parentheses in result?");
-DEFINE_string(queue_type, "fifo",
+DEFINE_FST_bool(keep_parentheses, false, "Keep PDT parentheses in result?");
+DEFINE_FST_string(queue_type, "fifo",
               "Queue type: one of: "
               "\"fifo\", \"lifo\", \"state\"");
-DEFINE_bool(path_gc, true, "Garbage collect shortest path data?");
-DEFINE_string(pdt_parentheses, "", "PDT parenthesis label pairs");
+DEFINE_FST_bool(path_gc, true, "Garbage collect shortest path data?");
+DEFINE_FST_string(pdt_parentheses, "", "PDT parenthesis label pairs");
 
 int pdtshortestpath_main(int argc, char **argv);
 

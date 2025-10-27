@@ -30,12 +30,12 @@
 #include <fst/script/randequivalent.h>
 #include <fst/script/script-impl.h>
 
-DECLARE_double(delta);
-DECLARE_bool(random);
-DECLARE_int32(max_length);
-DECLARE_int32(npath);
-DECLARE_uint64(seed);
-DECLARE_string(select);
+DECLARE_FST_double(delta);
+DECLARE_FST_bool(random);
+DECLARE_FST_int32(max_length);
+DECLARE_FST_int32(npath);
+DECLARE_FST_uint64(seed);
+DECLARE_FST_string(select);
 
 int fstequivalent_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -48,7 +48,7 @@ int fstequivalent_main(int argc, char **argv) {
   usage += argv[0];
   usage += " in1.fst in2.fst\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc != 3) {
     ShowUsage();
     return 1;

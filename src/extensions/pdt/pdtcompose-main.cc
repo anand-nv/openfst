@@ -32,10 +32,10 @@
 #include <fst/util.h>
 #include <fst/script/fst-class.h>
 
-DECLARE_string(pdt_parentheses);
-DECLARE_bool(left_pdt);
-DECLARE_bool(connect);
-DECLARE_string(compose_filter);
+DECLARE_FST_string(pdt_parentheses);
+DECLARE_FST_bool(left_pdt);
+DECLARE_FST_bool(connect);
+DECLARE_FST_string(compose_filter);
 
 int pdtcompose_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -50,7 +50,7 @@ int pdtcompose_main(int argc, char **argv) {
   usage += " in.pdt in.fst [out.pdt]\n";
   usage += " in.fst in.pdt [out.pdt]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc < 3 || argc > 4) {
     ShowUsage();
     return 1;

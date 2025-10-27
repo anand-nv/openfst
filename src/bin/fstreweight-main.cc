@@ -30,7 +30,7 @@
 #include <fst/script/text-io.h>
 #include <fst/script/weight-class.h>
 
-DECLARE_string(reweight_type);
+DECLARE_FST_string(reweight_type);
 
 int fstreweight_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -42,7 +42,7 @@ int fstreweight_main(int argc, char **argv) {
   usage += argv[0];
   usage += " in.fst potential.txt [out.fst]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc < 3 || argc > 4) {
     ShowUsage();
     return 1;

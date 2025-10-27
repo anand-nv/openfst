@@ -30,15 +30,15 @@
 #include <fst/script/fst-class.h>
 #include <fst/script/print.h>
 
-DECLARE_bool(acceptor);
-DECLARE_string(isymbols);
-DECLARE_string(osymbols);
-DECLARE_string(ssymbols);
-DECLARE_bool(numeric);
-DECLARE_string(save_isymbols);
-DECLARE_string(save_osymbols);
-DECLARE_bool(show_weight_one);
-DECLARE_string(missing_symbol);
+DECLARE_FST_bool(acceptor);
+DECLARE_FST_string(isymbols);
+DECLARE_FST_string(osymbols);
+DECLARE_FST_string(ssymbols);
+DECLARE_FST_bool(numeric);
+DECLARE_FST_string(save_isymbols);
+DECLARE_FST_string(save_osymbols);
+DECLARE_FST_bool(show_weight_one);
+DECLARE_FST_string(missing_symbol);
 
 int fstprint_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -50,7 +50,7 @@ int fstprint_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [binary.fst [text.fst]]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc > 3) {
     ShowUsage();
     return 1;

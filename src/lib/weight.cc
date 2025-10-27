@@ -26,11 +26,11 @@
 #include <fst/log.h>
 #include <fst/util.h>
 
-DEFINE_string(fst_weight_separator, ",",
+DEFINE_FST_string(fst_weight_separator, ",",
               "Character separator between printed composite weights; "
               "must be a single character");
 
-DEFINE_string(fst_weight_parentheses, "",
+DEFINE_FST_string(fst_weight_parentheses, "",
               "Characters enclosing the first weight of a printed composite "
               "weight (e.g., pair weight, tuple weight and derived classes) to "
               "ensure proper I/O of nested composite weights; "

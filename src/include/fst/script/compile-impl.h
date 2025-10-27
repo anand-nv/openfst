@@ -38,7 +38,7 @@
 #include <unordered_map>
 #include <string_view>
 
-DECLARE_string(fst_field_separator);
+DECLARE_FST_string(fst_field_separator);
 
 namespace fst {
 

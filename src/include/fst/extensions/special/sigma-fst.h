@@ -32,8 +32,8 @@
 #include <fst/matcher.h>
 #include <fst/util.h>
 
-DECLARE_int64(sigma_fst_sigma_label);
-DECLARE_string(sigma_fst_rewrite_mode);
+DECLARE_FST_int64(sigma_fst_sigma_label);
+DECLARE_FST_string(sigma_fst_rewrite_mode);
 
 namespace fst {
 namespace internal {

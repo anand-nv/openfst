@@ -26,7 +26,7 @@
 #include <fstream>
 #include <string_view>
 
-DEFINE_string(far_field_separator, "\t",
+DEFINE_FST_string(far_field_separator, "\t",
               "Set of characters used as a separator between printed fields");
 
 namespace fst {

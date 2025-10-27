@@ -41,8 +41,8 @@
 #include <fst/union-weight.h>
 #include <fst/test/weight-tester.h>
 
-DEFINE_uint64(seed, 403, "random seed");
-DEFINE_int32(repeat, 10000, "number of test repetitions");
+DEFINE_FST_uint64(seed, 403, "random seed");
+DEFINE_FST_int32(repeat, 10000, "number of test repetitions");
 
 namespace {
 
@@ -293,7 +293,7 @@ void TestFloatEqualityIsReflexive() {
 }  // namespace
 
 int main(int argc, char **argv) {
-  SET_FLAGS(argv[0], &argc, &argv, true);
+  SET_FST_FLAGS(argv[0], &argc, &argv, true);
 
   TestTemplatedWeights<float>(FST_FLAGS_seed,
                               FST_FLAGS_repeat);

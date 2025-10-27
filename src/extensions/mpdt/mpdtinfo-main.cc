@@ -32,7 +32,7 @@
 #include <fst/script/arg-packs.h>
 #include <fst/script/fst-class.h>
 
-DECLARE_string(mpdt_parentheses);
+DECLARE_FST_string(mpdt_parentheses);
 
 int mpdtinfo_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -43,7 +43,7 @@ int mpdtinfo_main(int argc, char **argv) {
   usage += argv[0];
   usage += " in.pdt\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc > 2) {
     ShowUsage();
     return 1;

@@ -30,8 +30,8 @@
 #include <fst/util.h>
 #include <fst/script/arg-packs.h>
 
-DECLARE_string(far_type);
-DECLARE_string(fst_type);
+DECLARE_FST_string(far_type);
+DECLARE_FST_string(fst_type);
 
 int farconvert_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -42,7 +42,7 @@ int farconvert_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [in.far [out.far]]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   s::ExpandArgs(argc, argv, &argc, &argv);
 
   if (argc > 3) {

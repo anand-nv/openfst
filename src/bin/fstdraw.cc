@@ -17,25 +17,25 @@
 
 #include <fst/flags.h>
 
-DEFINE_bool(acceptor, false, "Input in acceptor format");
-DEFINE_string(isymbols, "", "Input label symbol table");
-DEFINE_string(osymbols, "", "Output label symbol table");
-DEFINE_string(ssymbols, "", "State label symbol table");
-DEFINE_bool(numeric, false, "Print numeric labels");
-DEFINE_int32(precision, 5, "Set precision (number of char/float)");
-DEFINE_string(float_format, "g",
+DEFINE_FST_bool(acceptor, false, "Input in acceptor format");
+DEFINE_FST_string(isymbols, "", "Input label symbol table");
+DEFINE_FST_string(osymbols, "", "Output label symbol table");
+DEFINE_FST_string(ssymbols, "", "State label symbol table");
+DEFINE_FST_bool(numeric, false, "Print numeric labels");
+DEFINE_FST_int32(precision, 5, "Set precision (number of char/float)");
+DEFINE_FST_string(float_format, "g",
               "Floating-point format: one of \"e\", \"f\", or \"g\"");
-DEFINE_bool(show_weight_one, false,
+DEFINE_FST_bool(show_weight_one, false,
             "Print/draw arc weights and final weights equal to Weight::One()");
-DEFINE_string(title, "", "Set figure title");
-DEFINE_bool(portrait, false, "Portrait mode (def: landscape)");
-DEFINE_bool(vertical, false, "Draw bottom-to-top instead of left-to-right");
-DEFINE_int32(fontsize, 14, "Set fontsize");
-DEFINE_double(height, 11, "Set height");
-DEFINE_double(width, 8.5, "Set width");
-DEFINE_double(nodesep, 0.25,
+DEFINE_FST_string(title, "", "Set figure title");
+DEFINE_FST_bool(portrait, false, "Portrait mode (def: landscape)");
+DEFINE_FST_bool(vertical, false, "Draw bottom-to-top instead of left-to-right");
+DEFINE_FST_int32(fontsize, 14, "Set fontsize");
+DEFINE_FST_double(height, 11, "Set height");
+DEFINE_FST_double(width, 8.5, "Set width");
+DEFINE_FST_double(nodesep, 0.25,
               "Set minimum separation between nodes (see dot documentation)");
-DEFINE_double(ranksep, 0.40,
+DEFINE_FST_double(ranksep, 0.40,
               "Set minimum separation between ranks (see dot documentation)");
 
 int fstdraw_main(int argc, char **argv);

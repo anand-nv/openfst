@@ -19,9 +19,9 @@
 
 #include <fst/flags.h>
 
-DEFINE_string(mpdt_parentheses, "",
+DEFINE_FST_string(mpdt_parentheses, "",
               "MPDT parenthesis label pairs with assignments.");
-DEFINE_string(mpdt_new_parentheses, "",
+DEFINE_FST_string(mpdt_new_parentheses, "",
               "Output for reassigned parentheses and stacks");
 
 int mpdtreverse_main(int argc, char **argv);

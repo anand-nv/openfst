@@ -36,8 +36,8 @@
 // DEFINEs determine which semirings are tested; these are controlled by
 // the `defines` attributes of the associated build rules.
 
-DEFINE_uint64(seed, 403, "random seed");
-DEFINE_int32(repeat, 25, "number of test repetitions");
+DEFINE_FST_uint64(seed, 403, "random seed");
+DEFINE_FST_int32(repeat, 25, "number of test repetitions");
 
 namespace {
 
@@ -48,7 +48,7 @@ using fst::WeightGenerate;
 
 int main(int argc, char **argv) {
   SetFlag(&FST_FLAGS_fst_verify_properties, true);
-  SET_FLAGS(argv[0], &argc, &argv, true);
+  SET_FST_FLAGS(argv[0], &argc, &argv, true);
 
   static const int kCacheGcLimit = 20;
 

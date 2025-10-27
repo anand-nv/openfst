@@ -32,11 +32,11 @@
 #include <fst/script/encodemapper-class.h>
 #include <fst/script/getters.h>
 
-DECLARE_bool(decode);
-DECLARE_bool(encode_labels);
-DECLARE_bool(encode_weights);
-DECLARE_bool(encode_reuse);
-DECLARE_string(far_type);
+DECLARE_FST_bool(decode);
+DECLARE_FST_bool(encode_labels);
+DECLARE_FST_bool(encode_weights);
+DECLARE_FST_bool(encode_reuse);
+DECLARE_FST_string(far_type);
 
 int farencode_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -49,7 +49,7 @@ int farencode_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [in.far mapper [out.far]]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc < 3 || argc > 4) {
     ShowUsage();
     return 1;

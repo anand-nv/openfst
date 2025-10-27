@@ -34,10 +34,10 @@
 #include <fst/script/info-impl.h>
 #include <fst/script/info.h>
 
-DECLARE_string(arc_filter);
-DECLARE_string(info_type);
-DECLARE_bool(test_properties);
-DECLARE_bool(fst_verify);
+DECLARE_FST_string(arc_filter);
+DECLARE_FST_string(info_type);
+DECLARE_FST_bool(test_properties);
+DECLARE_FST_bool(fst_verify);
 
 namespace {
 // Prints info using only the header of the FST with path `in_name`.
@@ -79,7 +79,7 @@ int fstinfo_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [in.fst]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc > 2) {
     ShowUsage();
     return 1;

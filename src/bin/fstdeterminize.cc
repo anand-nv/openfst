@@ -19,16 +19,16 @@
 #include <fst/fst.h>
 #include <fst/weight.h>
 
-DEFINE_double(delta, fst::kDelta, "Comparison/quantization delta");
-DEFINE_string(weight, "", "Weight threshold");
-DEFINE_int64(nstate, fst::kNoStateId, "State number threshold");
-DEFINE_int64(subsequential_label, 0,
+DEFINE_FST_double(delta, fst::kDelta, "Comparison/quantization delta");
+DEFINE_FST_string(weight, "", "Weight threshold");
+DEFINE_FST_int64(nstate, fst::kNoStateId, "State number threshold");
+DEFINE_FST_int64(subsequential_label, 0,
              "Input label of arc corresponding to residual final output when"
              " producing a subsequential transducer");
-DEFINE_string(det_type, "functional",
+DEFINE_FST_string(det_type, "functional",
               "Type of determinization: \"functional\", "
               "\"nonfunctional\", \"disambiguate\"");
-DEFINE_bool(increment_subsequential_label, false,
+DEFINE_FST_bool(increment_subsequential_label, false,
             "Increment subsequential_label to obtain distinct labels for "
             " subsequential arcs at a given state");
 

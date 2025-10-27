@@ -49,7 +49,7 @@
 #include <fst/util.h>
 #include <string_view>
 
-DECLARE_bool(fst_align);
+DECLARE_FST_bool(fst_align);
 
 namespace fst {
 

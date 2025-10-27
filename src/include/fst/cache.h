@@ -41,8 +41,8 @@
 #include <unordered_map>
 #include <functional>
 
-DECLARE_bool(fst_default_cache_gc);
-DECLARE_int64(fst_default_cache_gc_limit);
+DECLARE_FST_bool(fst_default_cache_gc);
+DECLARE_FST_int64(fst_default_cache_gc_limit);
 
 namespace fst {
 

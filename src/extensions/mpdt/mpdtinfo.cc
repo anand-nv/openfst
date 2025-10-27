@@ -20,7 +20,7 @@
 
 #include <fst/flags.h>
 
-DEFINE_string(mpdt_parentheses, "",
+DEFINE_FST_string(mpdt_parentheses, "",
               "MPDT parenthesis label pairs with assignments");
 
 int mpdtinfo_main(int argc, char **argv);

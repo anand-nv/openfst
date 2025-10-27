@@ -17,15 +17,15 @@
 
 #include <fst/flags.h>
 
-DEFINE_string(isymbols, "", "Input label symbol table");
-DEFINE_string(osymbols, "", "Output label symbol table");
-DEFINE_string(relabel_isymbols, "", "Input symbol set to relabel to");
-DEFINE_string(relabel_osymbols, "", "Output symbol set to relabel to");
-DEFINE_string(relabel_ipairs, "", "Input relabel pairs (numeric)");
-DEFINE_string(relabel_opairs, "", "Output relabel pairs (numeric)");
-DEFINE_string(unknown_isymbol, "",
+DEFINE_FST_string(isymbols, "", "Input label symbol table");
+DEFINE_FST_string(osymbols, "", "Output label symbol table");
+DEFINE_FST_string(relabel_isymbols, "", "Input symbol set to relabel to");
+DEFINE_FST_string(relabel_osymbols, "", "Output symbol set to relabel to");
+DEFINE_FST_string(relabel_ipairs, "", "Input relabel pairs (numeric)");
+DEFINE_FST_string(relabel_opairs, "", "Output relabel pairs (numeric)");
+DEFINE_FST_string(unknown_isymbol, "",
               "Input symbol to use to relabel OOVs (default: OOVs are errors)");
-DEFINE_string(
+DEFINE_FST_string(
     unknown_osymbol, "",
     "Output symbol to use to relabel OOVs (default: OOVs are errors)");
 

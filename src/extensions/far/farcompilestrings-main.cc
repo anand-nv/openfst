@@ -34,19 +34,19 @@
 #include <fst/script/arg-packs.h>
 #include <fst/script/getters.h>
 
-DECLARE_string(key_prefix);
-DECLARE_string(key_suffix);
-DECLARE_int32(generate_keys);
-DECLARE_string(far_type);
-DECLARE_string(arc_type);
-DECLARE_string(entry_type);
-DECLARE_string(fst_type);
-DECLARE_string(token_type);
-DECLARE_string(symbols);
-DECLARE_string(unknown_symbol);
-DECLARE_bool(file_list_input);
-DECLARE_bool(keep_symbols);
-DECLARE_bool(initial_symbols);
+DECLARE_FST_string(key_prefix);
+DECLARE_FST_string(key_suffix);
+DECLARE_FST_int32(generate_keys);
+DECLARE_FST_string(far_type);
+DECLARE_FST_string(arc_type);
+DECLARE_FST_string(entry_type);
+DECLARE_FST_string(fst_type);
+DECLARE_FST_string(token_type);
+DECLARE_FST_string(symbols);
+DECLARE_FST_string(unknown_symbol);
+DECLARE_FST_bool(file_list_input);
+DECLARE_FST_bool(keep_symbols);
+DECLARE_FST_bool(initial_symbols);
 
 int farcompilestrings_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -57,7 +57,7 @@ int farcompilestrings_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [in1.txt [[in2.txt ...] out.far]]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   s::ExpandArgs(argc, argv, &argc, &argv);
 
   std::vector<std::string> sources;

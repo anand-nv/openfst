@@ -43,8 +43,8 @@
 #include <fst/vector-fst.h>
 #include <string_view>
 
-DECLARE_string(save_relabel_ipairs);
-DECLARE_string(save_relabel_opairs);
+DECLARE_FST_string(save_relabel_ipairs);
+DECLARE_FST_string(save_relabel_opairs);
 
 namespace fst {
 

@@ -29,11 +29,11 @@
 #include <fst/script/rmepsilon.h>
 #include <fst/script/weight-class.h>
 
-DECLARE_bool(connect);
-DECLARE_double(delta);
-DECLARE_int64(nstate);
-DECLARE_string(queue_type);
-DECLARE_string(weight);
+DECLARE_FST_bool(connect);
+DECLARE_FST_double(delta);
+DECLARE_FST_int64(nstate);
+DECLARE_FST_string(queue_type);
+DECLARE_FST_string(weight);
 
 int fstrmepsilon_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -45,7 +45,7 @@ int fstrmepsilon_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [in.fst [out.fst]]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc > 3) {
     ShowUsage();
     return 1;

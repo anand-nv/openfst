@@ -28,9 +28,9 @@
 #include <fst/util.h>
 #include <fst/script/arg-packs.h>
 
-DECLARE_string(begin_key);
-DECLARE_string(end_key);
-DECLARE_double(delta);
+DECLARE_FST_string(begin_key);
+DECLARE_FST_string(end_key);
+DECLARE_FST_double(delta);
 
 int farequal_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -40,7 +40,7 @@ int farequal_main(int argc, char **argv) {
   usage += argv[0];
   usage += " in1.far in2.far";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   s::ExpandArgs(argc, argv, &argc, &argv);
   if (argc != 3) {
     ShowUsage();

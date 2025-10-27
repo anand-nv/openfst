@@ -29,8 +29,8 @@
 #include <fst/script/getters.h>
 #include <fst/script/intersect.h>
 
-DECLARE_string(compose_filter);
-DECLARE_bool(connect);
+DECLARE_FST_string(compose_filter);
+DECLARE_FST_bool(connect);
 
 int fstintersect_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -44,7 +44,7 @@ int fstintersect_main(int argc, char **argv) {
   usage += " in1.fst in2.fst [out.fst]\n";
   usage += "  Flags: connect\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc < 3 || argc > 4) {
     ShowUsage();
     return 1;

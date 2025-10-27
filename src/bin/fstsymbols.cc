@@ -17,15 +17,15 @@
 
 #include <fst/flags.h>
 
-DEFINE_string(isymbols, "", "Input label symbol table");
-DEFINE_string(osymbols, "", "Output label symbol table");
-DEFINE_bool(clear_isymbols, false, "Clear input symbol table");
-DEFINE_bool(clear_osymbols, false, "Clear output symbol table");
-DEFINE_string(relabel_ipairs, "", "Input relabel pairs (numeric)");
-DEFINE_string(relabel_opairs, "", "Output relabel pairs (numeric)");
-DEFINE_string(save_isymbols, "", "Save fst file's input symbol table to file");
-DEFINE_string(save_osymbols, "", "Save fst file's output symbol table to file");
-DEFINE_bool(verify, false, "Verify fst properities before saving");
+DEFINE_FST_string(isymbols, "", "Input label symbol table");
+DEFINE_FST_string(osymbols, "", "Output label symbol table");
+DEFINE_FST_bool(clear_isymbols, false, "Clear input symbol table");
+DEFINE_FST_bool(clear_osymbols, false, "Clear output symbol table");
+DEFINE_FST_string(relabel_ipairs, "", "Input relabel pairs (numeric)");
+DEFINE_FST_string(relabel_opairs, "", "Output relabel pairs (numeric)");
+DEFINE_FST_string(save_isymbols, "", "Save fst file's input symbol table to file");
+DEFINE_FST_string(save_osymbols, "", "Save fst file's output symbol table to file");
+DEFINE_FST_bool(verify, false, "Verify fst properities before saving");
 
 int fstsymbols_main(int argc, char **argv);
 

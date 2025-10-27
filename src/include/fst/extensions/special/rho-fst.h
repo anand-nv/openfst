@@ -32,8 +32,8 @@
 #include <fst/matcher.h>
 #include <fst/util.h>
 
-DECLARE_int64(rho_fst_rho_label);
-DECLARE_string(rho_fst_rewrite_mode);
+DECLARE_FST_int64(rho_fst_rho_label);
+DECLARE_FST_string(rho_fst_rewrite_mode);
 
 namespace fst {
 namespace internal {
