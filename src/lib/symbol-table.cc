@@ -43,9 +43,9 @@
 #include <string_view>
 #include <fst/lock.h>
 
-DEFINE_bool(fst_compat_symbols, true,
+DEFINE_FST_bool(fst_compat_symbols, true,
             "Require symbol tables to match when appropriate");
-DEFINE_string(fst_field_separator, "\t ",
+DEFINE_FST_string(fst_field_separator, "\t ",
               "Set of characters used as a separator between printed fields");
 
 namespace fst {

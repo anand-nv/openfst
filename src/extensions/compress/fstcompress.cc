@@ -17,8 +17,8 @@
 
 #include <fst/flags.h>
 
-DEFINE_string(arc_type, "standard", "Output arc type");
-DEFINE_bool(decode, false, "Decode");
+DEFINE_FST_string(arc_type, "standard", "Output arc type");
+DEFINE_FST_bool(decode, false, "Decode");
 
 int fstcompress_main(int argc, char **argv);
 

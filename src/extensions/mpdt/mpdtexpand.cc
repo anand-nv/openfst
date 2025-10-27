@@ -19,10 +19,10 @@
 
 #include <fst/flags.h>
 
-DEFINE_string(mpdt_parentheses, "",
+DEFINE_FST_string(mpdt_parentheses, "",
               "MPDT parenthesis label pairs with assignments");
-DEFINE_bool(connect, true, "Trim output?");
-DEFINE_bool(keep_parentheses, false, "Keep PDT parentheses in result?");
+DEFINE_FST_bool(connect, true, "Trim output?");
+DEFINE_FST_bool(keep_parentheses, false, "Keep PDT parentheses in result?");
 
 int mpdtexpand_main(int argc, char **argv);
 

@@ -37,11 +37,11 @@
 #include <fst/script/arg-packs.h>
 #include <fst/script/script-impl.h>
 
-DECLARE_string(delimiter);
-DECLARE_string(empty_symbol);
-DECLARE_string(start_symbol);
-DECLARE_string(end_symbol);
-DECLARE_bool(classifier);
+DECLARE_FST_string(delimiter);
+DECLARE_FST_string(empty_symbol);
+DECLARE_FST_string(start_symbol);
+DECLARE_FST_string(end_symbol);
+DECLARE_FST_bool(classifier);
 
 namespace fst {
 namespace script {

@@ -17,7 +17,7 @@
 
 #include <fst/flags.h>
 
-DEFINE_string(fst_type, "vector", "Output FST type");
+DEFINE_FST_string(fst_type, "vector", "Output FST type");
 
 int fstconvert_main(int argc, char **argv);
 

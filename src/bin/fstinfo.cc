@@ -17,12 +17,12 @@
 
 #include <fst/flags.h>
 
-DEFINE_string(arc_filter, "any",
+DEFINE_FST_string(arc_filter, "any",
               "Arc filter: one of"
               " \"any\", \"epsilon\", \"iepsilon\", \"oepsilon\"; "
               "this only affects the counts of (co)accessible states, "
               "connected states, and (strongly) connected components");
-DEFINE_string(info_type, "auto",
+DEFINE_FST_string(info_type, "auto",
               "Info format: one of \"auto\", \"long\", \"short\", \"fast\".\n"
               "auto: Equivalent to \"long\" if the FST is an ExpandedFst,"
               " otherwise \"short\".\n"
@@ -32,9 +32,9 @@ DEFINE_string(info_type, "auto",
               "fast: Print only info that is fast to obtain (by reading"
               " only the file header);" " this is more info than \"short\","
               " but less than \"long\".");
-DEFINE_bool(test_properties, true,
+DEFINE_FST_bool(test_properties, true,
             "Compute property values (if unknown to FST)");
-DEFINE_bool(fst_verify, true, "Verify FST sanity");
+DEFINE_FST_bool(fst_verify, true, "Verify FST sanity");
 
 int fstinfo_main(int argc, char **argv);
 

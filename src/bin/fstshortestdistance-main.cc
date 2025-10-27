@@ -32,10 +32,10 @@
 #include <fst/script/text-io.h>
 #include <fst/script/weight-class.h>
 
-DECLARE_bool(reverse);
-DECLARE_double(delta);
-DECLARE_int64(nstate);
-DECLARE_string(queue_type);
+DECLARE_FST_bool(reverse);
+DECLARE_FST_double(delta);
+DECLARE_FST_int64(nstate);
+DECLARE_FST_string(queue_type);
 
 int fstshortestdistance_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -48,7 +48,7 @@ int fstshortestdistance_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [in.fst [distance.txt]]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc > 3) {
     ShowUsage();
     return 1;

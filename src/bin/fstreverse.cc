@@ -17,7 +17,7 @@
 
 #include <fst/flags.h>
 
-DEFINE_bool(require_superinitial, true, "Always create a superinitial state");
+DEFINE_FST_bool(require_superinitial, true, "Always create a superinitial state");
 
 int fstreverse_main(int argc, char **argv);
 

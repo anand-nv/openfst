@@ -27,7 +27,7 @@
 #include <fst/pair-weight.h>
 #include <fst/vector-fst.h>
 
-DECLARE_bool(normalize);
+DECLARE_FST_bool(normalize);
 
 int fstloglinearapply_main(int argc, char **argv) {
   std::string usage =
@@ -37,7 +37,7 @@ int fstloglinearapply_main(int argc, char **argv) {
   usage += argv[0];
   usage += " in.fst linear.fst [out.fst]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc < 3 || argc > 4) {
     ShowUsage();
     return 1;

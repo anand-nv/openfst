@@ -32,11 +32,11 @@
 #include <fst/script/fst-class.h>
 #include <fst/script/script-impl.h>
 
-DECLARE_string(pdt_parentheses);
-DECLARE_string(pdt_parser_type);
-DECLARE_int64(start_paren_labels);
-DECLARE_string(left_paren_prefix);
-DECLARE_string(right_paren_prefix);
+DECLARE_FST_string(pdt_parentheses);
+DECLARE_FST_string(pdt_parser_type);
+DECLARE_FST_int64(start_paren_labels);
+DECLARE_FST_string(left_paren_prefix);
+DECLARE_FST_string(right_paren_prefix);
 
 int pdtreplace_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -50,7 +50,7 @@ int pdtreplace_main(int argc, char **argv) {
   usage += argv[0];
   usage += " root.fst rootlabel [rule1.fst label1 ...] [out.fst]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc < 4) {
     ShowUsage();
     return 1;

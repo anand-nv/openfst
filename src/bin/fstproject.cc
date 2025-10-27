@@ -17,7 +17,7 @@
 
 #include <fst/flags.h>
 
-DEFINE_string(project_type, "input",
+DEFINE_FST_string(project_type, "input",
               "Side to project from, one of: \"input\", \"output\"");
 
 int fstproject_main(int argc, char **argv);

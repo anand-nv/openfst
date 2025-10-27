@@ -32,15 +32,15 @@
 #include <fst/script/fst-class.h>
 #include <fst/script/verify.h>
 
-DECLARE_string(isymbols);
-DECLARE_string(osymbols);
-DECLARE_bool(clear_isymbols);
-DECLARE_bool(clear_osymbols);
-DECLARE_string(relabel_ipairs);
-DECLARE_string(relabel_opairs);
-DECLARE_string(save_isymbols);
-DECLARE_string(save_osymbols);
-DECLARE_bool(verify);
+DECLARE_FST_string(isymbols);
+DECLARE_FST_string(osymbols);
+DECLARE_FST_bool(clear_isymbols);
+DECLARE_FST_bool(clear_osymbols);
+DECLARE_FST_string(relabel_ipairs);
+DECLARE_FST_string(relabel_opairs);
+DECLARE_FST_string(save_isymbols);
+DECLARE_FST_string(save_osymbols);
+DECLARE_FST_bool(verify);
 
 int fstsymbols_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -54,7 +54,7 @@ int fstsymbols_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [in.fst [out.fst]]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc > 3) {
     ShowUsage();
     return 1;

@@ -37,8 +37,8 @@
 #include <fst/log.h>
 #include <fst/util.h>
 
-DECLARE_string(fst_weight_parentheses);
-DECLARE_string(fst_weight_separator);
+DECLARE_FST_string(fst_weight_parentheses);
+DECLARE_FST_string(fst_weight_separator);
 
 namespace fst {
 

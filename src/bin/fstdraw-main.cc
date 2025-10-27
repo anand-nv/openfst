@@ -30,22 +30,22 @@
 #include <fst/script/draw.h>
 #include <fst/script/fst-class.h>
 
-DECLARE_bool(acceptor);
-DECLARE_string(isymbols);
-DECLARE_string(osymbols);
-DECLARE_string(ssymbols);
-DECLARE_bool(numeric);
-DECLARE_int32(precision);
-DECLARE_string(float_format);
-DECLARE_bool(show_weight_one);
-DECLARE_string(title);
-DECLARE_bool(portrait);
-DECLARE_bool(vertical);
-DECLARE_int32(fontsize);
-DECLARE_double(height);
-DECLARE_double(width);
-DECLARE_double(nodesep);
-DECLARE_double(ranksep);
+DECLARE_FST_bool(acceptor);
+DECLARE_FST_string(isymbols);
+DECLARE_FST_string(osymbols);
+DECLARE_FST_string(ssymbols);
+DECLARE_FST_bool(numeric);
+DECLARE_FST_int32(precision);
+DECLARE_FST_string(float_format);
+DECLARE_FST_bool(show_weight_one);
+DECLARE_FST_string(title);
+DECLARE_FST_bool(portrait);
+DECLARE_FST_bool(vertical);
+DECLARE_FST_int32(fontsize);
+DECLARE_FST_double(height);
+DECLARE_FST_double(width);
+DECLARE_FST_double(nodesep);
+DECLARE_FST_double(ranksep);
 
 int fstdraw_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -56,7 +56,7 @@ int fstdraw_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [binary.fst [text.dot]]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc > 3) {
     ShowUsage();
     return 1;

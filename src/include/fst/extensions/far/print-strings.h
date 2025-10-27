@@ -38,7 +38,7 @@
 #include <fst/string.h>
 #include <fst/symbol-table.h>
 
-DECLARE_string(far_field_separator);
+DECLARE_FST_string(far_field_separator);
 
 namespace fst {
 

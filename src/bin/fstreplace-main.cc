@@ -32,10 +32,10 @@
 #include <fst/script/replace.h>
 #include <fst/script/script-impl.h>
 
-DECLARE_string(call_arc_labeling);
-DECLARE_string(return_arc_labeling);
-DECLARE_int64(return_label);
-DECLARE_bool(epsilon_on_replace);
+DECLARE_FST_string(call_arc_labeling);
+DECLARE_FST_string(return_arc_labeling);
+DECLARE_FST_int64(return_label);
+DECLARE_FST_bool(epsilon_on_replace);
 
 int fstreplace_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -49,7 +49,7 @@ int fstreplace_main(int argc, char **argv) {
   usage += argv[0];
   usage += " root.fst rootlabel [rule1.fst label1 ...] [out.fst]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc < 4) {
     ShowUsage();
     return 1;

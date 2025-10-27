@@ -17,15 +17,15 @@
 
 #include <fst/flags.h>
 
-DEFINE_bool(acceptor, false, "Input in acceptor format");
-DEFINE_string(arc_type, "standard", "Output arc type");
-DEFINE_string(fst_type, "vector", "Output FST type");
-DEFINE_string(isymbols, "", "Input label symbol table");
-DEFINE_string(osymbols, "", "Output label symbol table");
-DEFINE_string(ssymbols, "", "State label symbol table");
-DEFINE_bool(keep_isymbols, false, "Store input label symbol table with FST");
-DEFINE_bool(keep_osymbols, false, "Store output label symbol table with FST");
-DEFINE_bool(keep_state_numbering, false, "Do not renumber input states");
+DEFINE_FST_bool(acceptor, false, "Input in acceptor format");
+DEFINE_FST_string(arc_type, "standard", "Output arc type");
+DEFINE_FST_string(fst_type, "vector", "Output FST type");
+DEFINE_FST_string(isymbols, "", "Input label symbol table");
+DEFINE_FST_string(osymbols, "", "Output label symbol table");
+DEFINE_FST_string(ssymbols, "", "State label symbol table");
+DEFINE_FST_bool(keep_isymbols, false, "Store input label symbol table with FST");
+DEFINE_FST_bool(keep_osymbols, false, "Store output label symbol table with FST");
+DEFINE_FST_bool(keep_state_numbering, false, "Do not renumber input states");
 
 int fstcompile_main(int argc, char **argv);
 

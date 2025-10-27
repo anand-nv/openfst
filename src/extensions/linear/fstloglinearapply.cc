@@ -18,7 +18,7 @@
 #include <fst/compat.h>
 #include <fst/flags.h>
 
-DEFINE_bool(normalize, true, "Normalize to get posterior");
+DEFINE_FST_bool(normalize, true, "Normalize to get posterior");
 
 int fstloglinearapply_main(int argc, char **argv);
 

@@ -31,8 +31,8 @@
 #include <fst/script/arg-packs.h>
 #include <fst/script/fst-class.h>
 
-DECLARE_string(mpdt_parentheses);
-DECLARE_string(mpdt_new_parentheses);
+DECLARE_FST_string(mpdt_parentheses);
+DECLARE_FST_string(mpdt_new_parentheses);
 
 int mpdtreverse_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -45,7 +45,7 @@ int mpdtreverse_main(int argc, char **argv) {
   usage += argv[0];
   usage += " in.pdt [out.fst]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc > 3) {
     ShowUsage();
     return 1;

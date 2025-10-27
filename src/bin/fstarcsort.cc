@@ -18,7 +18,7 @@
 #include <fst/compat.h>
 #include <fst/flags.h>
 
-DEFINE_string(sort_type, "ilabel",
+DEFINE_FST_string(sort_type, "ilabel",
               "Comparison method: one of \"ilabel\", \"olabel\"");
 
 int fstarcsort_main(int argc, char **argv);

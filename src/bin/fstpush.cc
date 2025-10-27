@@ -18,14 +18,14 @@
 #include <fst/flags.h>
 #include <fst/weight.h>
 
-DEFINE_double(delta, fst::kDelta, "Comparison/quantization delta");
-DEFINE_bool(push_weights, false, "Push weights");
-DEFINE_bool(push_labels, false, "Push output labels");
-DEFINE_bool(remove_total_weight, false,
+DEFINE_FST_double(delta, fst::kDelta, "Comparison/quantization delta");
+DEFINE_FST_bool(push_weights, false, "Push weights");
+DEFINE_FST_bool(push_labels, false, "Push output labels");
+DEFINE_FST_bool(remove_total_weight, false,
             "Remove total weight when pushing weights");
-DEFINE_bool(remove_common_affix, false,
+DEFINE_FST_bool(remove_common_affix, false,
             "Remove common prefix/suffix when pushing labels");
-DEFINE_string(reweight_type, "to_initial",
+DEFINE_FST_string(reweight_type, "to_initial",
               "Push/reweight to final (vs. to initial) states: one of "
               "\"to_initial\", \"to_final\"");
 

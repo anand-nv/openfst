@@ -29,15 +29,15 @@
 #include <fst/symbol-table.h>
 #include <fst/script/compile.h>
 
-DECLARE_bool(acceptor);
-DECLARE_string(arc_type);
-DECLARE_string(fst_type);
-DECLARE_string(isymbols);
-DECLARE_string(osymbols);
-DECLARE_string(ssymbols);
-DECLARE_bool(keep_isymbols);
-DECLARE_bool(keep_osymbols);
-DECLARE_bool(keep_state_numbering);
+DECLARE_FST_bool(acceptor);
+DECLARE_FST_string(arc_type);
+DECLARE_FST_string(fst_type);
+DECLARE_FST_string(isymbols);
+DECLARE_FST_string(osymbols);
+DECLARE_FST_string(ssymbols);
+DECLARE_FST_bool(keep_isymbols);
+DECLARE_FST_bool(keep_osymbols);
+DECLARE_FST_bool(keep_state_numbering);
 
 int fstcompile_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -48,7 +48,7 @@ int fstcompile_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [text.fst [binary.fst]]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc > 3) {
     ShowUsage();
     return 1;

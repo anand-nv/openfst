@@ -28,7 +28,7 @@
 #include <fst/script/getters.h>
 #include <fst/script/project.h>
 
-DECLARE_string(project_type);
+DECLARE_FST_string(project_type);
 
 int fstproject_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -41,7 +41,7 @@ int fstproject_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [in.fst [out.fst]]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc > 3) {
     ShowUsage();
     return 1;

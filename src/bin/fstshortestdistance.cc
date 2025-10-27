@@ -19,10 +19,10 @@
 #include <fst/fst.h>
 #include <fst/shortest-distance.h>
 
-DEFINE_bool(reverse, false, "Perform in the reverse direction");
-DEFINE_double(delta, fst::kShortestDelta, "Comparison/quantization delta");
-DEFINE_int64(nstate, fst::kNoStateId, "State number threshold");
-DEFINE_string(queue_type, "auto",
+DEFINE_FST_bool(reverse, false, "Perform in the reverse direction");
+DEFINE_FST_double(delta, fst::kShortestDelta, "Comparison/quantization delta");
+DEFINE_FST_int64(nstate, fst::kNoStateId, "State number threshold");
+DEFINE_FST_string(queue_type, "auto",
               "Queue type: one of \"auto\", "
               "\"fifo\", \"lifo\", \"shortest\", \"state\", \"top\"");
 

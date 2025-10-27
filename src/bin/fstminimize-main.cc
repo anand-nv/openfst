@@ -26,8 +26,8 @@
 #include <fst/script/fst-class.h>
 #include <fst/script/minimize.h>
 
-DECLARE_double(delta);
-DECLARE_bool(allow_nondet);
+DECLARE_FST_double(delta);
+DECLARE_FST_bool(allow_nondet);
 
 int fstminimize_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -38,7 +38,7 @@ int fstminimize_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [in.fst [out1.fst [out2.fst]]]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   if (argc > 4) {
     ShowUsage();
     return 1;

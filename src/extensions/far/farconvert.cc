@@ -17,8 +17,8 @@
 
 #include <fst/flags.h>
 
-DEFINE_string(fst_type, "", "Output FST type");
-DEFINE_string(far_type, "default",
+DEFINE_FST_string(fst_type, "", "Output FST type");
+DEFINE_FST_string(far_type, "default",
               "FAR file format type: one of: \"default\", \"fst\", "
               "\"stlist\", \"sttable\"; "
               "the input FAR type is used if \"default\"");

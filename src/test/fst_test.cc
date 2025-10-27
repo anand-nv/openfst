@@ -101,7 +101,7 @@ using fst::VectorFst;
 
 int main(int argc, char **argv) {
   SetFlag(&FST_FLAGS_fst_verify_properties, true);
-  SET_FLAGS(argv[0], &argc, &argv, true);
+  SET_FST_FLAGS(argv[0], &argc, &argv, true);
 
   LOG(INFO) << "Testing VectorFst<StdArc>.";
   {

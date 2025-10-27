@@ -17,10 +17,10 @@
 
 #include <fst/flags.h>
 
-DEFINE_string(compose_filter, "auto",
+DEFINE_FST_string(compose_filter, "auto",
               "Composition filter: one of \"alt_sequence\", \"auto\", "
               "\"match\", \"null\", \"sequence\", \"trivial\"");
-DEFINE_bool(connect, true, "Trim output");
+DEFINE_FST_bool(connect, true, "Trim output");
 
 int fstdifference_main(int argc, char **argv);
 

@@ -34,11 +34,11 @@
 #include <fst/util.h>
 #include <fst/script/arg-packs.h>
 
-DECLARE_string(key_prefix);
-DECLARE_string(key_suffix);
-DECLARE_int32(generate_keys);
-DECLARE_string(far_type);
-DECLARE_bool(file_list_input);
+DECLARE_FST_string(key_prefix);
+DECLARE_FST_string(key_suffix);
+DECLARE_FST_int32(generate_keys);
+DECLARE_FST_string(far_type);
+DECLARE_FST_bool(file_list_input);
 
 int farcreate_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -48,7 +48,7 @@ int farcreate_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [in1.fst [[in2.fst ...] out.far]]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   s::ExpandArgs(argc, argv, &argc, &argv);
 
   std::vector<std::string> sources;

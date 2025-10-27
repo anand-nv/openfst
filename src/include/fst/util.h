@@ -51,7 +51,7 @@
 
 // Utility for error handling.
 
-DECLARE_bool(fst_error_fatal);
+DECLARE_FST_bool(fst_error_fatal);
 
 #define FSTERROR()                                                     \
   (FST_FLAGS_fst_error_fatal ? LOG(FATAL) : LOG(ERROR))

@@ -21,10 +21,10 @@
 #include <fst/arc.h>
 #include <fst/register.h>
 
-DEFINE_int64(rho_fst_rho_label, 0,
+DEFINE_FST_int64(rho_fst_rho_label, 0,
              "Label of transitions to be interpreted as rho ('rest') "
              "transitions");
-DEFINE_string(rho_fst_rewrite_mode, "auto",
+DEFINE_FST_string(rho_fst_rewrite_mode, "auto",
               "Rewrite both sides when matching? One of:"
               " \"auto\" (rewrite iff acceptor), \"always\", \"never\"");
 

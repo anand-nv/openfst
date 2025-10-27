@@ -31,17 +31,17 @@
 #include <fst/script/arg-packs.h>
 #include <fst/script/getters.h>
 
-DECLARE_string(filename_prefix);
-DECLARE_string(filename_suffix);
-DECLARE_int32(generate_filenames);
-DECLARE_string(begin_key);
-DECLARE_string(end_key);
-DECLARE_bool(print_key);
-DECLARE_bool(print_weight);
-DECLARE_string(entry_type);
-DECLARE_string(token_type);
-DECLARE_string(symbols);
-DECLARE_bool(initial_symbols);
+DECLARE_FST_string(filename_prefix);
+DECLARE_FST_string(filename_suffix);
+DECLARE_FST_int32(generate_filenames);
+DECLARE_FST_string(begin_key);
+DECLARE_FST_string(end_key);
+DECLARE_FST_bool(print_key);
+DECLARE_FST_bool(print_weight);
+DECLARE_FST_string(entry_type);
+DECLARE_FST_string(token_type);
+DECLARE_FST_string(symbols);
+DECLARE_FST_bool(initial_symbols);
 
 int farprintstrings_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -51,7 +51,7 @@ int farprintstrings_main(int argc, char **argv) {
   usage += argv[0];
   usage += " [in1.far in2.far ...]\n";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   s::ExpandArgs(argc, argv, &argc, &argv);
 
   std::vector<std::string> sources;

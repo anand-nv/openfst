@@ -47,8 +47,8 @@
 #include <string_view>
 #include <fst/lock.h>
 
-DECLARE_bool(fst_compat_symbols);
-DECLARE_string(fst_field_separator);
+DECLARE_FST_bool(fst_compat_symbols);
+DECLARE_FST_string(fst_field_separator);
 
 namespace fst {
 

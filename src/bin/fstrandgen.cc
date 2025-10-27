@@ -18,17 +18,17 @@
 #include <fst/flags.h>
 #include <fst/script/getters.h>
 
-DEFINE_int32(max_length, std::numeric_limits<int32_t>::max(),
+DEFINE_FST_int32(max_length, std::numeric_limits<int32_t>::max(),
              "Maximum path length");
-DEFINE_int32(npath, 1, "Number of paths to generate");
-DEFINE_uint64(seed, ::fst::script::kDefaultSeed, "Random seed");
-DEFINE_string(select, "uniform",
+DEFINE_FST_int32(npath, 1, "Number of paths to generate");
+DEFINE_FST_uint64(seed, ::fst::script::kDefaultSeed, "Random seed");
+DEFINE_FST_string(select, "uniform",
               "Selection type: one of "
               " \"uniform\", \"log_prob\" (when appropriate),"
               " \"fast_log_prob\" (when appropriate)");
-DEFINE_bool(weighted, false,
+DEFINE_FST_bool(weighted, false,
             "Output tree weighted by path count vs. unweighted paths");
-DEFINE_bool(remove_total_weight, false,
+DEFINE_FST_bool(remove_total_weight, false,
             "Remove total weight when output weighted");
 
 int fstrandgen_main(int argc, char **argv);

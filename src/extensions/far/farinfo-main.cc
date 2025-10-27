@@ -24,9 +24,9 @@
 #include <fst/extensions/far/getters.h>
 #include <fst/extensions/far/script-impl.h>
 
-DECLARE_string(begin_key);
-DECLARE_string(end_key);
-DECLARE_bool(list_fsts);
+DECLARE_FST_string(begin_key);
+DECLARE_FST_string(end_key);
+DECLARE_FST_bool(list_fsts);
 
 int farinfo_main(int argc, char **argv) {
   namespace s = fst::script;
@@ -36,7 +36,7 @@ int farinfo_main(int argc, char **argv) {
   usage += " [in1.far in2.far...]\n";
   usage += "  Flags: begin_key end_key list_fsts";
 
-  SET_FLAGS(usage.c_str(), &argc, &argv, true);
+  SET_FST_FLAGS(usage.c_str(), &argc, &argv, true);
   s::ExpandArgs(argc, argv, &argc, &argv);
 
   std::vector<std::string> sources;

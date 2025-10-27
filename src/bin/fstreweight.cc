@@ -17,7 +17,7 @@
 
 #include <fst/flags.h>
 
-DEFINE_string(reweight_type, "to_initial",
+DEFINE_FST_string(reweight_type, "to_initial",
               "Push/reweight to final (vs. to initial) states: one of "
               "\"to_initial\", \"to_final\"");
 

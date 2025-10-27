@@ -21,12 +21,12 @@
 #include <fst/arc.h>
 #include <fst/register.h>
 
-DEFINE_int64(phi_fst_phi_label, 0,
+DEFINE_FST_int64(phi_fst_phi_label, 0,
              "Label of transitions to be interpreted as phi ('failure') "
              "transitions");
-DEFINE_bool(phi_fst_phi_loop, true,
+DEFINE_FST_bool(phi_fst_phi_loop, true,
             "When true, a phi self loop consumes a symbol");
-DEFINE_string(phi_fst_rewrite_mode, "auto",
+DEFINE_FST_string(phi_fst_rewrite_mode, "auto",
               "Rewrite both sides when matching? One of:"
               " \"auto\" (rewrite iff acceptor), \"always\", \"never\"");
 

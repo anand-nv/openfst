@@ -18,18 +18,18 @@
 #include <fst/flags.h>
 #include <fst/extensions/linear/linearscript.h>
 
-DECLARE_string(arc_type);
-DECLARE_string(epsilon_symbol);
-DECLARE_string(unknown_symbol);
-DECLARE_string(vocab);
-DECLARE_string(out);
-DECLARE_string(save_isymbols);
-DECLARE_string(save_fsymbols);
-DECLARE_string(save_osymbols);
+DECLARE_FST_string(arc_type);
+DECLARE_FST_string(epsilon_symbol);
+DECLARE_FST_string(unknown_symbol);
+DECLARE_FST_string(vocab);
+DECLARE_FST_string(out);
+DECLARE_FST_string(save_isymbols);
+DECLARE_FST_string(save_fsymbols);
+DECLARE_FST_string(save_osymbols);
 
 int fstlinear_main(int argc, char **argv) {
   // TODO(wuke): more detailed usage
-  SET_FLAGS(argv[0], &argc, &argv, true);
+  SET_FST_FLAGS(argv[0], &argc, &argv, true);
   fst::script::ValidateDelimiter();
   fst::script::ValidateEmptySymbol();
 

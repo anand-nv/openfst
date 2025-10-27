@@ -32,9 +32,9 @@
 #include <fst/matcher.h>
 #include <fst/util.h>
 
-DECLARE_int64(phi_fst_phi_label);
-DECLARE_bool(phi_fst_phi_loop);
-DECLARE_string(phi_fst_rewrite_mode);
+DECLARE_FST_int64(phi_fst_phi_label);
+DECLARE_FST_bool(phi_fst_phi_loop);
+DECLARE_FST_string(phi_fst_rewrite_mode);
 
 namespace fst {
 namespace internal {

@@ -20,7 +20,7 @@
 
 #include <fst/flags.h>
 
-DEFINE_string(pdt_parentheses, "", "PDT parenthesis label pairs");
+DEFINE_FST_string(pdt_parentheses, "", "PDT parenthesis label pairs");
 
 int pdtinfo_main(int argc, char **argv);
 

@@ -19,11 +19,11 @@
 
 #include <fst/flags.h>
 
-DEFINE_string(mpdt_parentheses, "",
+DEFINE_FST_string(mpdt_parentheses, "",
               "MPDT parenthesis label pairs with assignments");
-DEFINE_bool(left_mpdt, true, "Is the first argument the MPDT?");
-DEFINE_bool(connect, true, "Trim output?");
-DEFINE_string(compose_filter, "paren",
+DEFINE_FST_bool(left_mpdt, true, "Is the first argument the MPDT?");
+DEFINE_FST_bool(connect, true, "Trim output?");
+DEFINE_FST_string(compose_filter, "paren",
               "Composition filter, one of: \"expand\", \"expand_paren\", "
               "\"paren\"");
 
