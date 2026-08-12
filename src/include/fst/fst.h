@@ -687,8 +687,8 @@ class FstImpl {
     properties_.store(impl.properties_.load(std::memory_order_relaxed),
                       std::memory_order_relaxed);
     type_ = impl.type_;
-    isymbols_ = impl.isymbols_ ? impl.isymbols_->Copy() : nullptr;
-    osymbols_ = impl.osymbols_ ? impl.osymbols_->Copy() : nullptr;
+    isymbols_ = fst::WrapUnique(impl.isymbols_ ? impl.isymbols_->Copy() : nullptr);
+    osymbols_ = fst::WrapUnique(impl.osymbols_ ? impl.osymbols_->Copy() : nullptr);
     return *this;
   }
 
